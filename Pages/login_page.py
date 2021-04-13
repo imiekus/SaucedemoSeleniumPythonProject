@@ -1,6 +1,5 @@
 from Pages.base_page import BasePage
 from locators import LoginPageLocators
-from selenium.webdriver.common.keys import Keys
 
 
 class LoginPage(BasePage):
@@ -13,6 +12,19 @@ class LoginPage(BasePage):
         element = self.driver.find_element(*LoginPageLocators.PASSWORD_INPUT)
         element.send_keys(password)
 
+    def click_login_button(self):
+        element = self.driver.find_element(*LoginPageLocators.LOGIN_BTN)
+        element.click()
+
+    def successful_login(self, username, password):
+        self.insert_username(username)
+        self.insert_password(password)
+        self.click_login_button()
+
     def check_error_visible(self):
         element = self.driver.find_element(*LoginPageLocators.ERROR_LOGIN)
+        element.is_displayed()
+
+    def check_login_button_exists(self):
+        element = self.driver.find_element(*LoginPageLocators.LOGIN_BTN)
         element.is_displayed()
