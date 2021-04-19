@@ -2,8 +2,7 @@ from Tests.base_test import BaseTest
 from Pages.login_page import LoginPage
 from Pages.inventory_page import InventoryPage
 from ddt import ddt, data, unpack
-from get_data import get_csv_data
-import time
+from TestData.get_data import get_csv_data
 
 
 @ddt

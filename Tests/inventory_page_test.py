@@ -1,6 +1,7 @@
 from Tests.base_test import BaseTest
 from Pages.login_page import LoginPage
 from Pages.inventory_page import InventoryPage
+from TestData.test_data_setup import TestData
 
 
 class InventoryPageTest(BaseTest):
@@ -8,7 +9,7 @@ class InventoryPageTest(BaseTest):
     def setUp(self):
         super().setUp()
         lp = LoginPage(self.driver)
-        lp.successful_login(username='standard_user', password='secret_sauce')
+        lp.successful_login(username=TestData.USERNAME, password=TestData.PASSWORD)
 
     def test_logout(self):
         print('Inventory Page Test TC_1: Logout from service')
