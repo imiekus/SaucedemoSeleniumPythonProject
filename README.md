@@ -8,8 +8,7 @@ This project is my first project using Selenium with Python.
 
 ## Steps:
 1. Clone the repository;
-2a. To run all tests please execute 'Tests/test_suite.py' file;
-2b. To run tests separately, please execute chosen file;
+2. To run all tests please execute 'Tests/test_suite.py' file; to run tests separately, please execute chosen file;
 
 ## Test cases that were automated
 
